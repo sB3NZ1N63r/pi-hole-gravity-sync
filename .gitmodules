@@ -1,0 +1,3 @@
+[submodule "automated_install"]
+	path = automated_install
+	url = https://github.com/sB3NZ1N63r/pi-hole-gs-install.git
