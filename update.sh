@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
+# shellcheck shell=bash
 
 GS_LOCAL_REPO='/etc/gravity-sync/.gs'
 
 if [ -f "${GS_LOCAL_REPO}/dev" ]; then
     source ${GS_LOCAL_REPO}/dev
 else
-    BRANCH='origin/master'
+    BRANCH="origin/$(git rev-parse --abbrev-ref HEAD)" #'origin/master'
 fi
 
 if [ "$BRANCH" != "origin/master" ]; then
