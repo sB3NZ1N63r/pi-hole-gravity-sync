@@ -1739,11 +1739,11 @@ function config_generate {
     echo_need
     read -r INPUT_REMOTE_HOST
 
-        if [ "${INPUT_REMOTE_HOST}" == "" ]; then
-            MESSAGE="Remote host cannot be blank!"
-            echo_fail
-            exit_no_change
-        fi
+    if [ "${INPUT_REMOTE_HOST}" == "" ]; then
+        MESSAGE="Remote host cannot be blank!"
+        echo_fail
+        exit_no_change
+    fi
 
     MESSAGE="${UI_CONFIG_SAVING} ${INPUT_REMOTE_HOST} host to ${GS_CONFIG_FILE}"
     echo_stat
@@ -1757,11 +1757,11 @@ function config_generate {
     echo_need
     read -r INPUT_REMOTE_USER
 
-        if [ "${INPUT_REMOTE_USER}" == "" ]; then
-            MESSAGE="User name cannot be blank!"
-            echo_fail
-            exit_no_change
-        fi
+    if [ "${INPUT_REMOTE_USER}" == "" ]; then
+        MESSAGE="User name cannot be blank!"
+        echo_fail
+        exit_no_change
+    fi
 
     MESSAGE="${UI_CONFIG_SAVING} ${INPUT_REMOTE_USER}@${INPUT_REMOTE_HOST} to ${GS_CONFIG_FILE}"
     echo_stat
