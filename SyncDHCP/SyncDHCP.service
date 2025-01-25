@@ -1,0 +1,11 @@
+[Unit]
+Description=Updates DHCP DNS between two pihole servers
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/SyncDHCP.sh Start
+ExecStop=/usr/bin/SyncDHCP.sh Stop
+ExecRestart=/usr/bin/SyncDHCP.sh Restart
+
+[Install]
+WantedBy=multi-user.target
